@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Linkedin, FileText } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -18,17 +18,23 @@ const Contact = () => {
         <Card className="card-hover">
           <CardContent className="p-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="w-full sm:w-auto group">
-                <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Email Me
+              <Button size="lg" className="w-full sm:w-auto group" asChild>
+                <a href="mailto:aakashverma852787@gmail.com">
+                  <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Email Me
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto group">
-                <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                LinkedIn Profile
+              <Button size="lg" variant="outline" className="w-full sm:w-auto group" asChild>
+                <a href="https://www.linkedin.com/in/aakash-verma-3b1187272" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  LinkedIn
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto group">
-                <FileText className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Download Resume
+              <Button size="lg" variant="outline" className="w-full sm:w-auto group" asChild>
+                <a href="https://github.com/aakahsverma852787" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  GitHub
+                </a>
               </Button>
             </div>
           </CardContent>
